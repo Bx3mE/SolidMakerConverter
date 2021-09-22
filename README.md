@@ -22,9 +22,10 @@ and:
 2) RESTART CURA!!! (or thumbnail creation might fail later)
 3) The Machine Settings, Profiles and Quality prtesets are loaded when the included project (*.3mf file) is loaded.
 4) Cura needs a restart (again...) to have everything loaded correctly.
-5) Now you can start cura and add a model of your choice, select desired settings (some are later replaced by the conversion script and wont affect the print).
-6) Slice and save the print file to a *.gcode file.
-7) drag and drop the *.gcode file onto the SolidMakerConverter.exe file and a *.slm file will be created.
+5) Compile the SolidMakerConverter using Microsoft VisualStudio.
+6) Now you can start cura and add a model of your choice, select desired settings (some are later replaced by the conversion script and wont affect the print).
+7) Slice and save the print file to a *.gcode file.
+8) drag and drop the *.gcode file onto the SolidMakerConverter.exe file and a *.slm file will be created.
 
 
 

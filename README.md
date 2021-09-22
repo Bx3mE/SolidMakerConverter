@@ -35,6 +35,8 @@ Ameralabs Town Model - Thingiverse (https://www.thingiverse.com/thing:2810666)
 Owners Group for X9 - Facebook (https://www.facebook.com/groups/583066442160349)
 OpenSLA - Facebook (https://www.facebook.com/groups/283996458880799)
 
+Regex online tool i like - RegExr(https://regexr.com/)
+
 
 _Use at your own risk... ;)_
 

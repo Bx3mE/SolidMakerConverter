@@ -1,7 +1,33 @@
 # SolidMakerConverter
 C# Project to Convert Cura Slicer files into Solidmaker/XVico X9 *.slm files.
 
-You will need to use the Cura profile, The updated thumbnail create pytrhon script and the "filament profile" to generate a valid *.gcode file which the converter accepts.
-The GCode file can then be dragged and dropped onto the SolidmakerConverter exe file and a *.slm file with the input files name will be created in the input files directory.
+## WHY this project?
+The SolidPreform software that came with the printer is buggy and slices faulty prints which in some cases can not succeed. Since the printer has some wierd requirements on the GCode file (*.slm) and also can not be created by hand due to binary content i designed this tool to make cura sliced files work with the printer.
 
-Use at your own risk... ;)
+## How does it work?
+You will need to use the Cura profile, The updated thumbnail create pytrhon script and the "settings" (embedded in the Cura project file *.3mf) to generate a valid *.gcode file which the converter accepts. The GCode file can then be dragged and dropped onto the SolidmakerConverter exe file and a *.slm file with the input files name will be created in the input files directory after processing is completed. Progress is shown in a Console window.
+
+The outbut file supports preview image and should let you play somewhat with the slicer. Keep in mind The Solidmaker and X9 use M910, M920 and M930 to set up three tools each specifying speed and laser power setting which are selected by specifying a T value att the end of a G1 move.
+
+### You can find more GCode info for Solidmaker on Reddit: 
+https://www.reddit.com/r/SolidMakerOwners/
+
+### Solidmaker Instruction Manual:
+https://solidpre-1251753108.cos.na-siliconvalley.myqcloud.com/The%20Instructions%20of%20Solidmaker.pdf
+
+## Step By step:
+I made my workflow work using Cure 4.9.1 (https://github.com/Ultimaker/Cura/releases/download/4.9.1/Ultimaker_Cura-4.9.1-amd64.exe)
+and:
+1) COPY The CreateSLMKRThumbnail.py needs to be added to the scripts folder (C:\Program Files\Ultimaker Cura 4.9.1\plugins\PostProcessingPlugin\scripts).
+2) RESTART CURA!!! (or thumbnail creation might fail later)
+3) The Machine Settings, Profiles and Quality prtesets are loaded when the included project (*.3mf file) is loaded.
+4) Cura needs a restart (again...) to have everything loaded correctly.
+5) Now you can start cura and add a model of your choice, select desired settings (some are later replaced by the conversion script and wont affect the print).
+6) Slice and save the print file to a *.gcode file.
+7) drag and drop the *.gcode file onto the SolidMakerConverter.exe file and a *.slm file will be created.
+
+
+
+_Use at your own risk... ;)_
+
+

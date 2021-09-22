@@ -27,6 +27,13 @@ and:
 7) Slice and save the print file to a *.gcode file.
 8) drag and drop the *.gcode file onto the SolidMakerConverter.exe file and a *.slm file will be created.
 
+## Useful Links:
+
+Original Kickstarter - Solidmaker (https://www.kickstarter.com/projects/solidmaker/solidmaker-affordable-laser-sla-3d-printer)
+Almost same printer as Solidmaker - XVico X9 (http://www.xvico3d.com/pd.jsp?id=22#_pp=111_499)
+Ameralabs Town Model - Thingiverse (https://www.thingiverse.com/thing:2810666)
+Owners Group for X9 - Facebook (https://www.facebook.com/groups/583066442160349)
+OpenSLA - Facebook (https://www.facebook.com/groups/283996458880799)
 
 
 _Use at your own risk... ;)_

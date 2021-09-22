@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SolidMakerConverter": {
+      "commandName": "Project",
+      "commandLineArgs": "F:\\SCP_3DSLA_TestModel_SUPPORTED.gcode"
+    }
+  }
+}

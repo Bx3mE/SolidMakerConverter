@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31702.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidMakerConverter", "SolidMakerConverter\SolidMakerConverter.csproj", "{0BDA2E7B-0298-4CD7-A8A2-C865FDC8951A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CuraFiles", "CuraFiles", "{D47FEF20-026D-4EF5-BAFD-8937A53FA9E0}"
+	ProjectSection(SolutionItems) = preProject
+		Cura Files\CreateSLMKRThumbnail.py = Cura Files\CreateSLMKRThumbnail.py
+		Cura Files\SolidMakerProfile_AmeraLabsTown.3mf = Cura Files\SolidMakerProfile_AmeraLabsTown.3mf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

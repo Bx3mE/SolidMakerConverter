@@ -57,6 +57,11 @@ namespace SolidMakerConverter
 
         static void Main(string[] args)
         {
+            if (args.Length == 0)
+            {
+                Console.Out.WriteLine("No file to convert was specified...");
+                return;
+            }
             DateTime startTime = DateTime.Now;
             string outfile = args[0] + ".slm";
             Console.WriteLine("== GCode conversion for Solidmaker ==");
@@ -67,8 +72,26 @@ namespace SolidMakerConverter
                 Console.WriteLine("    \"" + igit + ", ");
 
             string TotalLayers = "";
-
-            StreamReader sr1 = File.OpenText(args[0]);
+            DateTime begin = DateTime.Now;
+            bool fileopenok = false;
+            StreamReader sr1 = null;
+            while (begin + TimeSpan.FromMinutes(1) > DateTime.Now && !fileopenok)
+            {
+                try
+                {
+                    sr1 = File.OpenText(args[0]);
+                    fileopenok = true;
+                }
+                catch
+                {
+                    Console.Out.WriteLine("Waiting fore file to become acessible...");
+                }
+            }
+            if (!fileopenok)
+            {
+                Console.Out.WriteLine("Could not open input file.");
+                return;
+            }
             string? s1 = sr1.ReadLine();
             bool found1 = false;
             while (s1 != null && !found1)
@@ -208,7 +231,7 @@ namespace SolidMakerConverter
             Console.WriteLine("GCode processing complete\n\nProcess Base64 bmp thumbnail from Cura to binary data...");
 
             byte[] newBytes = Convert.FromBase64String(fileimage);
-            sw.Write(Encoding.ASCII.GetBytes("M714 T1.1 T1.1 T1.1 T1.1\n M715" + "\n;"));
+            sw.Write(Encoding.ASCII.GetBytes("M714 T1.1 T1.1 T1.1 T1.1\nG28\nM715" + "\n;"));
             sw.Write(newBytes);
             sw.Write(Encoding.ASCII.GetBytes("\nM716 L" + newBytes.Length + "\n"));
             sw.Write(newBytes);

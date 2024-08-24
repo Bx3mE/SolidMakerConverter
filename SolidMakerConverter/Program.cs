@@ -53,6 +53,7 @@ namespace SolidMakerConverter
             new MoveType("Outter Wall", "the outmost line", ";TYPE:WALL-OUTER", "T2"),
             new MoveType("Inner Wall", "Inside the outter wall, facing eachother and the fill ", ";TYPE:WALL-INNER", "T1"),
             new MoveType("Infill", "inner fill of the model", ";TYPE:FILL", "T1"),
+            new MoveType("Support", "Support structures", ";TYPE:SUPPORT", "T2"),
             new MoveType("Skin", "The top outter wall surface", ";TYPE:SKIN", "T2") };
 
         static void Main(string[] args)
